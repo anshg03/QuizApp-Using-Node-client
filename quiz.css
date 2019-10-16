@@ -1,0 +1,134 @@
+:root{
+    --color-1:18214A;
+    --color-2:4B4B71; 
+    --color-3:white;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+
+}
+.body{
+    margin:0px;
+    padding: 0px;
+}
+.navbar-style
+{
+    box-shadow: 0 5px 10px #efefef;
+}
+.inner-1{
+    align-items: center;
+    display:flex;
+    height:100vh;
+    width: 100vw;
+    justify-content: center;
+    background-color: var(--color-1);
+
+ }
+ .rect-1{
+    height:96vh;
+    width: 97vw;
+    background-color: var(--color-1);
+ 
+ }
+ .logo{
+    align-items: top;
+    justify-content: center;
+    height: 30vh;
+    display:flex;
+ }
+ .btn{
+    background-color: var(--color-2);
+    width: 170p;;
+    height:70px;
+    border-radius: 30px;
+    font-family: Roboto;
+    display: flex;
+    justify-content: center;
+    font-size: 30;
+    color:var(--color-3);
+ }
+ 
+ .skill{
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+    display:flex;
+    color: var(--color-3);
+    font-size: 45;
+    font-family: PT Serif Caption;
+ }
+ .skill1{
+   align-items: center;
+   justify-content: center;
+   height: 30vh;
+   display:flex;
+   color: var(--color-3);
+   font-size: 45;
+   font-family: PT Serif Caption;
+}
+ .start{
+    align-items: center;
+    justify-content: center;
+    height: 36vh;
+    display:flex;
+ }
+ h1
+ {
+    display:inline;
+ }
+ #que
+ {
+     font-size: 24;
+
+ }
+ .option1
+ {
+     width: 200.92px;
+     height: 28.49px;
+     left: 50.27px;
+     color: white;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+background: #6477C6;
+border: 1px solid #3E8BD5;
+box-sizing: border-box;
+border-radius: 10px;
+    
+ }
+ .btn1
+ {
+color: white;
+left: 50.27px;
+top: 249.55px;
+width: 120.92px;
+height: 36.49px;
+background: #6477C6;
+border: 1px solid #3E8BD5;
+box-sizing: border-box;
+border-radius: 10px;
+ }
+ .resultPage
+ {
+   font-size: 15px;
+   justify-content: center;
+   align-content: center;
+   display: flex;
+   background: #6477C6;
+   height: 100%;
+   width:100%;
+ }
+ .nav ul li
+ {
+  padding-top: 20%;
+   padding-right: 80%;
+   
+ }
+ z{
+    font-size: 5em;
+    color: white;
+ }
+
+    
