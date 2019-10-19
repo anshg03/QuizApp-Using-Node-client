@@ -2,6 +2,7 @@ $(function(){
     result();
     let mark=0; 
     sessionStorage.setItem("mark",mark);
+    startTimer();
   })
 
 let count;
