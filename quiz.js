@@ -14,7 +14,8 @@ $(document).ready(function(){
      $.ajax({ 
          url:'http://localhost:8000/'
         }).done(function(dataNew) {
-         data=dataNew;     
+         data=dataNew;    
+        
   });
 
  })
@@ -40,6 +41,14 @@ $(document).ready(function(){
         $("#value4").text(data[0][queCount].options[3]);
         sessionStorage.setItem("ans",data[0][queCount].answer);
     }
+    else
+        {
+            $("#value1").attr("disabled", true);
+            $("#value2").attr("disabled", true);
+            $("#value3").attr("disabled", true);
+            $("#value4").attr("disabled", true);
+
+        }
 }
 
 
@@ -64,7 +73,33 @@ function process(value)
     getJSON();  
 }
 
-
+function startTimer() {
+    var time_in_minutes = 3;
+    var current_time = Date.parse(new Date());
+    var deadline = new Date(current_time + time_in_minutes*60*1000);
+    function time_remaining(endtime){
+        var t = Date.parse(endtime) - Date.parse(new Date());
+        var seconds = Math.floor( (t/1000) % 60 );
+        var minutes = Math.floor( (t/1000/60) % 60 );
+        var hours = Math.floor( (t/(1000*60*60)) % 24 );
+        var days = Math.floor( t/(1000*60*60*24) );
+        return {'total':t, 'days':days, 'hours':hours, 'minutes':minutes, 'seconds':seconds};
+    }
+    function run_clock(id,endtime){
+        var clock = document.getElementById('timer');
+        function update_clock(){
+            var t = time_remaining(endtime);
+            document.getElementById("timer").innerHTML=t.minutes+':'+t.seconds;
+            if(t.total<=0){
+                clearInterval(timeinterval);
+                location.replace("index2.html");
+             }
+        }
+        update_clock();
+        var timeinterval = setInterval(update_clock,1000);
+    }
+        run_clock('timer',deadline);
+}
   
 
 

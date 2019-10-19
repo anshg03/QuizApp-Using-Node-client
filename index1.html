@@ -16,28 +16,32 @@ Name:Quiz Application -->
         <link rel="stylesheet" href="quiz.css">
     </head>
     <body>
-            <div class="secondPage">
-                    <header class="header">
-                        <nav class="navbar navbar-style">
-                            <div class="container">
-                                <div class="navbar-header">  
-                                </div>    
-                            </div>
-                        </nav>
-                    </header>   
-                    <center><k>Question <p id="queno">1</p> of 7</k></center>
-                    <center><p id="que">what is the financial capital of India?</p></center>
-                    <center><div class="options" id="answer-select">
-                        <div class="option1"><button id="value1" class="btn" onclick="process(value1);">Mumbai</button></div>
-                        <div class="option1"><button id="value2" class="btn" onclick="process(value2);">Delhi</button></div>
-                        <div class="option1"><button id="value3" class="btn" onclick="process(value3);">Pune</button></div>
-                        <div class="option1"> <button id="value4" class="btn" onclick="process(value4);">Panaji</button></div>
-                    </select>
-                </div></center>
-                <br>
-                <br>
-                    <center><a href="index2.html"><button type="button" class="btn1">submit</button></a></center>
-            </div>
+            <div class="container-fluid">
+                    <div class="row">
+                            <div class="col-sm r2">  
+                             
+                                <div class="data">  
+                                    <div>
+                                        <p id="timer">02:20</p>
+                                        <text id="QuestionNo">Question <p id="queno"> 1</p> of 7</text>
+                                    </div>
+                                    <div>
+                                        <p id="que">what is the financial capital of India?</p>
+                                    </div>
+                                    <div>
+                                        <div class="options" id="answer-select">
+                                            <div class="option1"><button id="value1" class="btn" onclick="process(value1);">Mumbai</button></div>
+                                            <div class="option1"><button id="value2" class="btn" onclick="process(value2);">Delhi</button></div>
+                                            <div class="option1"><button id="value3" class="btn" onclick="process(value3);">Pune</button></div>
+                                            <div class="option1"> <button id="value4" class="btn" onclick="process(value4);">Panaji</button></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                    <a href="index2.html" id="link"><button type="button" class="Startbtn">Submit</button></a>
+                                    </div>
+                                        
+                        </div>
+                    </div>
     </body>
     <script src="quiz.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
