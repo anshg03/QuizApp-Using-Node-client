@@ -131,3 +131,11 @@ justify-content: center;
 align-items: center;
 display: flex;
 }
+.inputBox
+{
+ 
+  height: 30px;
+  width: 18rem;
+  margin: 10;
+  border-radius: 20;
+}
