@@ -140,3 +140,10 @@ display: flex;
   border-radius: 5px;
  
 }
+.signup
+{
+  color: wheat;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
