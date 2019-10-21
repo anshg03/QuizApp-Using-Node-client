@@ -74,6 +74,21 @@ function process(value)
     getJSON();  
 }
 
+
+  
+function signUpData()
+{
+   let email=document.getElementById("Email_Id");
+   let Password=document.getElementById("Password");
+   let ReEnteredPass=document.getElementById("Re-Entered-Pass");
+
+   console.log(email);
+   console.log(Password);  
+   console.log(ReEnteredPass);
+
+}
+
+
 function startTimer() {
     var time_in_minutes = 3;
     var current_time = Date.parse(new Date());
@@ -100,20 +115,6 @@ function startTimer() {
         var timeinterval = setInterval(update_clock,1000);
     }
         run_clock('timer',deadline);
-}
-  
-function signUpData()
-{
-   let email=document.getElementById("Email_Id");
-   let Password=document.getElementById("Password");
-   let ReEnteredPass=document.getElementById("Re-Entered-Pass");
-
-   console.log(email);
-   console.log(Password);  
-   console.log(ReEnteredPass);
-
-
-
 }
 
 
