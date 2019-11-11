@@ -1,9 +1,8 @@
 module.exports = (app, db) => {
 
-    app.post("/signup", (req, res) => {
+    app.post("/add", (req, res) => {
         console.log(req.body);
-        const note = { name: req.body.name, email:req.body.email,password:req.body.password,score:"0" };
-    
+        const note = { name: req.body.name, email:req.body.email,password:req.body.password,score:req.body.score };
         db.collection('UserData').findOne({email: req.body.email}).then(function(result){
             if(!(result==null)){
                 res.status(200).json({msg:"Email Id already present"});
@@ -34,6 +33,4 @@ module.exports = (app, db) => {
             }
         });
     });
-
-
 };
