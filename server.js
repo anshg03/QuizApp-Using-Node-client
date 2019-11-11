@@ -1,7 +1,7 @@
 const express = require('express');
 const mongo = require('mongodb').MongoClient;
 const db = require('./config/config');
-const port = 8000;
+const port = 8000 || process.env.PORT;
 const app = express();
 const cors=require('cors');
 app.use(express.urlencoded({extended:true}));
