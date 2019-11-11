@@ -78,20 +78,14 @@ function signUpData()
    let email=document.getElementById("Email_Id");
    let password=document.getElementById("Password");
    let reEnteredPass=document.getElementById("Re-Entered-Pass");
-   let atposition=email[0].value.indexOf("@");  
-   let dotposition=email[0].value.lastIndexOf(".");  
 
-   console.log(email);
-   console.log(Password);  
-   console.log(ReEnteredPass);
-   if((!name && !email && !password && !reEnteredPass))
+   console.log(email.value);
+   console.log(Password.value);  
+   console.log(reEnteredPass.value);
+   if((!name.value && !email.value && !password.value && !reEnteredPass.value))
     {
         alert("Fill the data..");
        
-    }
-    else if (atposition<1 || dotposition<atposition+2 || dotposition+2>=email[0].value.length)
-    {  
-        alert("Please enter a valid Email"); 
     }
     else if(!(password === reEnteredPass)){
 
