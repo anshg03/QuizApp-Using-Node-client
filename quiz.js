@@ -51,7 +51,6 @@ $(document).ready(function(){
         }
 }
 
-
 function process(value)
 {
     selectedValue=value.innerText;
@@ -73,14 +72,12 @@ function process(value)
     getJSON();  
 }
 
-
-  
 function signUpData()
 {
    let email=document.getElementById("Email_Id");
    let Password=document.getElementById("Password");
    let ReEnteredPass=document.getElementById("Re-Entered-Pass");
-
+   
    console.log(email);
    console.log(Password);  
    console.log(ReEnteredPass);
