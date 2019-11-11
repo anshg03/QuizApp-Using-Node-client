@@ -23,7 +23,7 @@ module.exports = (app, db) => {
        });
     });
 
-    app.post("/", (req, res) => {
+    app.post("/login", (req, res) => {
         const note = { email: req.body.email, password: req.body.password };
         //console.log(req.body);
         db.collection('UserData').findOne({email: req.body.email, password: req.body.password}).then(function(result){
