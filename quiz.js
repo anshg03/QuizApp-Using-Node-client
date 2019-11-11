@@ -143,13 +143,12 @@ function checkLogin()
         }).done(function(data){
             if(data.msg=="User Exist")
             {
-                location.replace("Dashboard.html");
-                //console.log(data);
+                location.replace("instruction.html");
             }
             else if(data.msg=="User Does Not Exist")
             {
-                location.replace("login.html");
                 alert("User Does Not Exist");
+                location.replace("login.html");
             }
             else
             {
