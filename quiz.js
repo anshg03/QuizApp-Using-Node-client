@@ -4,8 +4,9 @@ let queCount=0;
 let countNo=1;
 
 $(document).ready(function(){
+    
      $.ajax({ 
-         url:'https://quizappi.herokuapp.com/'
+         url:'https://quizappi.herokuapp.com'
         }).done(function(dataNew) {
          data=dataNew; 
     });
