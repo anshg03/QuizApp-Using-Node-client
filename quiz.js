@@ -74,14 +74,16 @@ function process(value)
 
 function signUpData()
 {
+   let name=document.getElementById("name");
    let email=document.getElementById("Email_Id");
    let password=document.getElementById("Password");
    let reEnteredPass=document.getElementById("Re-Entered-Pass");
+   
 
    console.log(email);
    console.log(Password);  
    console.log(ReEnteredPass);
-   if((!email && !password && !reEnteredPass))
+   if((!name && !email && !password && !reEnteredPass))
     {
         alert("Fill the data..");
        
@@ -92,19 +94,14 @@ function signUpData()
     }
     else
     {
-       
        $.ajax({
-        url: 'http://localhost:8000/add',
+        url: 'http://localhost:8000/signup',
         type: 'POST',
         dataType: 'json',
         data: { 
-         'name': name[0].value, 
-         'email':email[0].value,
-         'age' : age[0].value,
-         'height' : height[0].value,
-         'Weight' : Weight[0].value,
-         'DesiredWeight' : DesiredWeight[0].value,
-         'password':password[0].value
+         'name': name, 
+         'email':email,
+         'password' : password
         }
          }).done(function(data){
                 if(data.msg=="success")
