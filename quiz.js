@@ -106,6 +106,7 @@ function signUpData()
          }).done(function(data){
                 if(data.msg=="success")
                 {
+                    alert("Login successfull")
                     location.replace("login.html");
                 }
                 else if(data.msg=="Email Id already present")
