@@ -117,6 +117,48 @@ function signUpData()
 
 }
 
+function checkLogin()
+{
+    email=document.getElementsByClassName("email");
+    password=document.getElementsByClassName("password");
+ 
+    var atposition=email[0].value.indexOf("@");  
+    var dotposition=email[0].value.lastIndexOf(".");  
+
+    if (atposition<1 || dotposition<atposition+2 || dotposition+2>=email[0].value.length){  
+
+        alert("Please enter a valid e-mail address");  
+      
+    }
+    else
+    {
+          $.ajax({
+            url: 'http://localhost:8000/login',
+            type: 'POST',
+            dataType: 'json',
+            data: { 
+            'email': email[0].value, 
+            'password' : password[0].value,
+            }
+        }).done(function(data){
+            if(data.msg=="User Exist")
+            {
+                location.replace("Dashboard.html");
+                //console.log(data);
+            }
+            else if(data.msg=="User Does Not Exist")
+            {
+                location.replace("login.html");
+                alert("User Does Not Exist");
+            }
+            else
+            {
+                alert("User Does Not Exist");
+            }
+         }); 
+    }  
+}
+
 
 function startTimer() {
     var time_in_minutes = 3;
