@@ -3,11 +3,9 @@ let data;
 let queCount=0;
 let countNo=1;
 
-
-
 $(document).ready(function(){
      $.ajax({ 
-         url:'https://quizappi.herokuapp.com/'
+         url:'https://quizappi.herokuapp.com'
         }).done(function(dataNew) {
          data=dataNew; 
     });
@@ -120,8 +118,6 @@ function checkLogin()
 {
     let email=document.getElementById("Email_Id");
     let password=document.getElementById("Password");
-    console.log(email);
-    console.log(password)
           $.ajax({
             url: 'https://quizappi.herokuapp.com/login',
             type: 'POST',
