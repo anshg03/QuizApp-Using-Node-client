@@ -1,7 +1,7 @@
 module.exports = (app, db) => {
 
     app.post("/add", (req, res) => {
-        console.log(req.body);
+        //console.log(req.body);
         const note = { name: req.body.name, email:req.body.email,password:req.body.password,score:req.body.score };
         db.collection('UserData').findOne({email: req.body.email}).then(function(result){
             if(!(result==null)){
@@ -25,7 +25,7 @@ module.exports = (app, db) => {
 
     app.post("/login", (req, res) => {
         const note = { email: req.body.email, password: req.body.password };
-        console.log(req.body);
+        //console.log(req.body);
         db.collection('UserData').findOne({email: req.body.email, password: req.body.password}).then(function(result){
             if(!(result==null)){
             
