@@ -5,10 +5,7 @@ let countNo=1;
 
 $(document).ready(function(){
      $.ajax({ 
-         url:'https://quizappi.herokuapp.com',
-         headers: {
-            'Access-Control-Allow-Origin': '*'
-        }
+         url:'https://quizappi.herokuapp.com/'
         }).done(function(dataNew) {
          data=dataNew; 
     });
@@ -96,9 +93,6 @@ function signUpData()
         url: 'https://quizappi.herokuapp.com/add',
         type: 'POST',
         dataType: 'json',
-        headers: {
-            'Access-Control-Allow-Origin': '*'
-        },
         data: { 
          'name': name.value, 
          'email':email.value,
@@ -125,12 +119,9 @@ function checkLogin()
     let email=document.getElementById("Email_Id");
     let password=document.getElementById("Password");
           $.ajax({
-            url: 'https://quizappi.herokuapp.com/',
+            url: 'https://quizappi.herokuapp.com/login',
             type: 'POST',
             dataType: 'json',
-            headers: {
-                'Access-Control-Allow-Origin': '*'
-            },
             data: { 
             'email': email.value, 
             'password' : password.value,
