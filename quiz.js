@@ -75,12 +75,48 @@ function process(value)
 function signUpData()
 {
    let email=document.getElementById("Email_Id");
-   let Password=document.getElementById("Password");
-   let ReEnteredPass=document.getElementById("Re-Entered-Pass");
-   
+   let password=document.getElementById("Password");
+   let reEnteredPass=document.getElementById("Re-Entered-Pass");
+
    console.log(email);
    console.log(Password);  
    console.log(ReEnteredPass);
+   if((!email && !password && !reEnteredPass))
+    {
+        alert("Fill the data..");
+       
+    }
+    else if(!(password === reEnteredPass)){
+
+        alert("Password does not matchs"); 
+    }
+    else
+    {
+       
+       $.ajax({
+        url: 'http://localhost:8000/add',
+        type: 'POST',
+        dataType: 'json',
+        data: { 
+         'name': name[0].value, 
+         'email':email[0].value,
+         'age' : age[0].value,
+         'height' : height[0].value,
+         'Weight' : Weight[0].value,
+         'DesiredWeight' : DesiredWeight[0].value,
+         'password':password[0].value
+        }
+         }).done(function(data){
+                if(data.msg=="success")
+                {
+                    location.replace("login.html");
+                }
+                else if(data.msg=="Email Id already present")
+                {
+                    alert("Email ID Already Present")
+                }
+        }); 
+    }
 
 }
 
