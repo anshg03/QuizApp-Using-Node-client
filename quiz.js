@@ -13,7 +13,6 @@ $(document).ready(function(){
     });
 
     let mark=0;
-    result();
     sessionStorage.setItem("mark",mark);
     
  })
@@ -100,7 +99,7 @@ function signUpData()
          'name': name.value, 
          'email':email.value,
          'password' : password.value,
-         'score':initialScore.value
+         'score':initialScore
         }
          }).done(function(data){
                 if(data.msg=="success")
