@@ -1,7 +1,7 @@
 const express = require('express');
 const mongo = require('mongodb').MongoClient;
 const db = require('./config/config');
-const port = process.env.port||'8080';
+var port = process.env.PORT || 8000;
 const app = express();
 const cors=require('cors');
 app.use(express.urlencoded({extended:true}));
@@ -15,5 +15,8 @@ mongo.connect(db.url, { useNewUrlParser: true, useUnifiedTopology: true }, (err,
     require('./app/routes')(app, database);
     app.listen(port, () => {
         console.log('connected to db');
+    });
+    server.listen(port, function() {
+        console.log("App is running on port " + port);
     });
 })
