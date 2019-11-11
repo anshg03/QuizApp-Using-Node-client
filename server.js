@@ -3,8 +3,10 @@ const mongo = require('mongodb').MongoClient;
 const db = require('./config/config');
 const port = 8000;
 const app = express();
+const cors=require('cors');
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
+app.use(cors());
 
 
 
