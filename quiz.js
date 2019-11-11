@@ -74,7 +74,7 @@ function process(value)
 
 function signUpData()
 {
-   let name=document.getElementById("name");
+   let name=document.getElementById("userName");
    let email=document.getElementById("Email_Id");
    let password=document.getElementById("Password");
    let reEnteredPass=document.getElementById("Re-Entered-Pass");
