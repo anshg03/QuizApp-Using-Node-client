@@ -119,26 +119,17 @@ function signUpData()
 
 function checkLogin()
 {
-    email=document.getElementsByClassName("email");
-    password=document.getElementsByClassName("password");
- 
-    var atposition=email[0].value.indexOf("@");  
-    var dotposition=email[0].value.lastIndexOf(".");  
-
-    if (atposition<1 || dotposition<atposition+2 || dotposition+2>=email[0].value.length){  
-
-        alert("Please enter a valid e-mail address");  
-      
-    }
-    else
-    {
+    let email=document.getElementById("Email_Id");
+    let password=document.getElementById("Password");
+    console.log(email);
+    console.log(password)
           $.ajax({
             url: 'http://localhost:8000/login',
             type: 'POST',
             dataType: 'json',
             data: { 
-            'email': email[0].value, 
-            'password' : password[0].value,
+            'email': email.value, 
+            'password' : password.value,
             }
         }).done(function(data){
             if(data.msg=="User Exist")
@@ -154,9 +145,8 @@ function checkLogin()
             {
                 alert("User Does Not Exist");
             }
-         }); 
-    }  
-}
+    }); 
+} 
 
 
 function startTimer() {
