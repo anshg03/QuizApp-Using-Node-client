@@ -1,14 +1,8 @@
-$(function(){
-    result();
-    let mark=0; 
-    sessionStorage.setItem("mark",mark);
-    startTimer();
-  })
-
 let count;
 let data;
 let queCount=0;
 let countNo=1;
+
 
 
 $(document).ready(function(){
@@ -16,8 +10,12 @@ $(document).ready(function(){
          url:'http://localhost:8000/'
         }).done(function(dataNew) {
          data=dataNew; 
-  });
+    });
 
+    let mark=0;
+    result();
+    sessionStorage.setItem("mark",mark);
+    
  })
  
  function result()
@@ -28,7 +26,7 @@ $(document).ready(function(){
  }
 
   function getJSON(){
-    
+
     queCount++;
     countNo++;
     if(countNo<=7)
@@ -78,7 +76,7 @@ function signUpData()
    let email=document.getElementById("Email_Id");
    let password=document.getElementById("Password");
    let reEnteredPass=document.getElementById("Re-Entered-Pass");
-
+   let initialScore=0;
    console.log(email.value);
    console.log(Password.value);  
    console.log(reEnteredPass.value);
@@ -87,20 +85,22 @@ function signUpData()
         alert("Fill the data..");
        
     }
-    else if(!(password === reEnteredPass)){
+    else if(!(password.value === reEnteredPass.value)){
 
         alert("Password does not matchs"); 
     }
     else
     {
+        console.log("Ajax call")
        $.ajax({
-        url: 'http://localhost:8000/signup',
+        url: 'http://localhost:8000/add',
         type: 'POST',
         dataType: 'json',
         data: { 
-         'name': name, 
-         'email':email,
-         'password' : password
+         'name': name.value, 
+         'email':email.value,
+         'password' : password.value,
+         'score':initialScore.value
         }
          }).done(function(data){
                 if(data.msg=="success")
