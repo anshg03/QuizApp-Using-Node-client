@@ -7,7 +7,7 @@ let countNo=1;
 
 $(document).ready(function(){
      $.ajax({ 
-         url:'http://localhost:8000/'
+         url:'https://quizappi.herokuapp.com/'
         }).done(function(dataNew) {
          data=dataNew; 
     });
@@ -92,7 +92,7 @@ function signUpData()
     {
         console.log("Ajax call")
        $.ajax({
-        url: 'http://localhost:8000/add',
+        url: 'https://quizappi.herokuapp.com/add',
         type: 'POST',
         dataType: 'json',
         data: { 
@@ -123,7 +123,7 @@ function checkLogin()
     console.log(email);
     console.log(password)
           $.ajax({
-            url: 'http://localhost:8000/login',
+            url: 'https://quizappi.herokuapp.com/login',
             type: 'POST',
             dataType: 'json',
             data: { 
