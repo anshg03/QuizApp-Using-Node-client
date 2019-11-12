@@ -10,7 +10,7 @@ $(document).ready(function(){
         }).done(function(dataNew) {
          data=dataNew; 
     });
-
+    result();
     let mark=0;
     sessionStorage.setItem("mark",mark);
     
