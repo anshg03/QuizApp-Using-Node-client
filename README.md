@@ -25,4 +25,4 @@ Create a simple quiz game
 #### 3) Lastly score declared.
 
 ## Visit:
-[QuizApp](https://aadeshnichite.github.io/QuizApp-Using-nodejs/)
+[QuizApp](https://infallible-albattani-316bf2.netlify.com)
