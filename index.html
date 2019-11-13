@@ -1,8 +1,12 @@
+<!-- Author:Aadesh Nichite
+Name:Quiz Application -->
 <html>
     <head>
         <title>Quiz</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
@@ -11,22 +15,32 @@
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="quiz.css">
+
+        <link rel="stylesheet" href="css/quiz.css">
     </head>
     <body>
         <div class="container-fluid">
                 <div class="row">
                         <div class="col-sm r"> 
                             <div class="data">
-                                <div class="InstructionDiv">  
-                                    <p id="InstructionsHead">Instructions</p>
-                                    <p id="instr">1.There are 10 questions</p>
-                                    <p id="instr">2.Click on answer that you want</p>
-                                    <p id="instr">3.Go till end of the test</p>
-                                    <p id="instr">4.Click on the submit and check the result</p>
+                               
+                                <div>  
+                                    <img src='/images/logo.png' width="180" lnext previousheight="180" id="image">
                                 </div>
                                 <div>
-                                    <a href="Quiz.html" id="link"><button type="button" class="Startbtn">Get Started</button></a>
+                                    <p id="name">Skill Mania</p>
+                                </div>
+                                <div>
+                                    <input type="text" id="Email_Id" placeholder=" Enter Email_Id" class="inputBox" /> 
+                                </div>
+                               
+                                <div>
+                                    <input type="password" id="Password" placeholder=" Enter Password" class="inputBox" />
+                                </div>
+
+                                <div>
+                                    <p id="link"><button type="button" class="Startbtn" onclick="checkLogin();">Login</button></p>
+                                    <a href="/frontend/signuppage.html" class="signup">Create New Account</a>
                                 </div>
                             </div>
                         </div>   
@@ -42,4 +56,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/quiz.js"></script>
 </html>

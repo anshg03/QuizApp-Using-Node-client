@@ -89,7 +89,6 @@ function signUpData()
     }
     else
     {
-        console.log("Ajax call")
        $.ajax({
         url: 'https://quizappi.herokuapp.com/add',
         type: 'POST',
@@ -104,7 +103,7 @@ function signUpData()
                 if(data.msg=="success")
                 {
                     alert("Login successfull")
-                    location.replace("login.html");
+                    location.replace("/index.html");
                 }
                 else if(data.msg=="Email Id already present")
                 {
@@ -130,12 +129,12 @@ function checkLogin()
         }).done(function(data){
             if(data.msg=="User Exist")
             {
-                location.replace("instruction.html");
+                location.replace('/frontend/instruction.html');
             }
             else if(data.msg=="User Does Not Exist")
             {
                 alert("User Does Not Exist");
-                location.replace("login.html");
+                location.replace("/index.html");
             }
             else
             {
