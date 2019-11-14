@@ -2,6 +2,7 @@ let count;
 let data;
 let queCount=0;
 let countNo=1;
+let mark=0;
 
 $(document).ready(function(){
     
@@ -11,7 +12,7 @@ $(document).ready(function(){
          data=dataNew; 
     });
     result();
-    let mark=0;
+    
     sessionStorage.setItem("mark",mark);
     
  })
@@ -22,9 +23,8 @@ $(document).ready(function(){
      let mark1=parseInt(marksession, 10);
     $("#result").text(marksession);
  }
-
   function getJSON(){
-
+  
     queCount++;
     countNo++;
     if(countNo<=7)
