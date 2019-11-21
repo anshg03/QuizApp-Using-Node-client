@@ -20,7 +20,7 @@ $(document).ready(function(){
  function result()
  {
     let marksession=sessionStorage.getItem("mark");
-     let mark1=parseInt(marksession, 10);
+    let mark1=parseInt(marksession, 10);
     $("#result").text(marksession);
  }
   function getJSON(){
